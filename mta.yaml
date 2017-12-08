@@ -10,6 +10,15 @@ modules:
    requires:
     - name: hdi-container
 
+
+ - name: tinyjs
+   type: nodejs
+   path: tinyjs
+   provides:
+    - name: tinyjs_api
+      properties:
+         url: ${default-url}
+
 resources:
  - name: hdi-container
    parameters:
