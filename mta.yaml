@@ -19,7 +19,7 @@ modules:
    provides:
     - name: tinyjs_api
       properties:
-         url: ${default-url}
+         service_url: ${default-url}
 
  - name: tinyui
    type: html5
@@ -28,7 +28,7 @@ modules:
     - name: tinyjs_api
       group: destinations
       properties: 
-        name: tinyjs.be
+        name: tinyjs_be
         url: ~(service_url}
 
 resources:
