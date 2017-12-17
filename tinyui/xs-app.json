@@ -1,5 +1,9 @@
 {
 	"welcomeFile": "index.html",
 	"authenticationMethod": "none",
-	"routes": []
+	"routes": [ 
+		{
+			"source": "^/euro.xsodata/.*$",
+			"destination": "tinyjd_be"
+		}]
 }
