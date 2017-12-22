@@ -29,7 +29,7 @@ modules:
       group: destinations
       properties: 
         name: tinyjs_be
-        url: ~(service_url}
+        url: ~{service_url}
 
 resources:
  - name: hdi-container
