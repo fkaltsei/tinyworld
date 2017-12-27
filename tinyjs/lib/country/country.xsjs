@@ -16,11 +16,11 @@ function saveCountry(country) {
 		status: $.net.http.CREATED };
 	}
 }
-var country = {
-	name: $.request.parameters.get("name"),
-	partof: $.request.parameters.get("continent")
-};
+
+var body = $.request.body.asString();
+var country = JSON.parse(body); 
 //validate the inputs here
 var output = saveCountry(country);
 $.response.contentType = "application/json";
-$.response.setBody(output);
+$.response.setBody(output.body);
+$.response.status = output.status;

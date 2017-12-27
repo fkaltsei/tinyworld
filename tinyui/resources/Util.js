@@ -14,9 +14,9 @@ function openFirstDialog() {
 			content: [new sap.ui.commons.form.SimpleForm({
 				content: [
 					new sap.ui.core.Title({text: "Country Name"}),
-					new sap.ui.commons.Lable({text: "name"}),
+					new sap.ui.commons.Label({text: "name"}),
 					new sap.ui.commons.TextField({value: "", id: "name"}),
-					new sap.ui.commons.Lable({text: "partof"}),
+					new sap.ui.commons.Label({text: "partof"}),
 					new sap.ui.commons.TextField({value: "", id: "partof"})
 					]
 			})] //sap.uo.cor.Control
