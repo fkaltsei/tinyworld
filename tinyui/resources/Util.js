@@ -31,20 +31,20 @@ function openFirstDialog() {
 				payload.name = name;
 				payload.partof = partof;
 				var insertdata = JSON.stringify(payload);
-				
+				//$.ajax ist offenbar eine jquery - Mehudie die in sapui5 eingebaut ist
 				$.ajax({
 					type: "POST",
 					url: "country/country.xsjs",
 					contentType: "application/json",
 					data: insertdata,
-					dataType: "json",
+					dataType: "json", //dieses Formt wird bei der Rückantwort erwartet
 					crossDomain: "true",
-					success: function(data) {
+					success: function(data) { //dies Funktion wird wird nach bei Erfolg aufgerufen 
 						oFirstDialog.close();
 						sap.ui.getCore().byId("tinytab").getModel().refresh(true);
 						alert("Data inserted successfully!");
 					},
-					error: function(data) {
+					error: function(data) { //diese Funktion wird bei Fehler aufgerufen
 						var message = JSON.stringify(data);
 						alert(message);
 					}
