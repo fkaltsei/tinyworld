@@ -61,10 +61,10 @@ $(function() {
 	$.ajax({
 		type: "GET",
 		url: "/",
-		headers: {"X-Csfr-Token": "Fetch"},
+		headers: {"X-Csrf-token": "Fetch"},
 		success: function(res, status, xhr) {
 			var sHeaderCsrfToken = "X-Csrf-Token";
-			var sCsrfToken = xhr.getResonseHeader(sHeaderCsrfToken);
+			var sCsrfToken = xhr.getResponseHeader(sHeaderCsrfToken);
 			//for POST, PUT, and DELETE requests, add the CSRF token to the header
 			$(document).ajaxSend(function(event, jqxhr, settings) {
 				if (settings.type==="POST" || settings.type==="PUT" || settings.type==="DELETE") {
