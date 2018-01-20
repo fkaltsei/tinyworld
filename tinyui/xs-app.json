@@ -6,11 +6,7 @@
 				"scope": "$XSAPPNAME.view"
 	},
 				{"source": ".*\\.xsjs", "destination": "tinyjs_be",
-				"authenticationType": "xsuaa",
 				"scope": "$XSAPPNAME.create"
-					},
-				{"source": "^/(.*)$",
-				"localDir": "resources",
-				"scope": "$XSAPPNAME.view"
-				}]
+					}
+				]
 }

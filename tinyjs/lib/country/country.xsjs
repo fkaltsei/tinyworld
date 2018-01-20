@@ -3,10 +3,10 @@ function saveCountry(country) {
 	var output = JSON.stringify(country);
 	var fnCreateCountry = conn.loadProcedure("tinyworld.tinydb::createCountry");
 	var result = fnCreateCountry({IM_COUNTRY: country.name, IM_CONTINENT: country.partof});
-	
+
 	conn.commit();
 	conn.close();
-	if (result && result.EX_ERROR != null) { 
+	if (result && result.EX_ERROR !== null) { 
 		return {body: result,
 		status: $.net.http.BAD_REQUEST	
 		};
