@@ -22,6 +22,7 @@ function openFirstDialog() {
 			})] //sap.uo.cor.Control
 		});
 		
+
 		oFirstDialog.addButton(new sap.ui.commons.Button({
 			text: "OK",
 			press: function() {
